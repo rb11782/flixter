@@ -34,7 +34,7 @@
     </ul>
     </div>
     </nav>
-
+    <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
     <% if notice.present? %>
     <p class="alert alert-info"><%= notice %></p>
     <% end %>
