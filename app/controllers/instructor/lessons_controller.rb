@@ -10,14 +10,6 @@ class Instructor::LessonsController < ApplicationController
     @lesson = current_section.lessons.create(lesson_params)
     redirect_to instructor_course_path(current_section.course)
   end
-  
-  def create
-    if current_section.course.user != current_user
-      return render plain: 'Unauthorized', status: :unauthorized
-    end
-    @lesson = @section.lessons.create(lesson_params)
-    redirect_to instructor_course_path(@section.course)
-  end
 
   private
 
