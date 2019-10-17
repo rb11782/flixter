@@ -22,6 +22,9 @@
         <%= link_to 'See All Courses', courses_path, class: 'nav-link' %>
       </li>
       <% if user_signed_in? %>
+      <li class="nav-item">
+      <%= link_to 'My Dashboard', dashboard_path, class: 'nav-link' %>
+      </li>
       <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
         </li>
         <li class="nav-item">
@@ -47,9 +50,39 @@
     </div>
     <div id="footer">
       <div class="container">
+      <div class="row">
+      <div class="col-12 col-sm-3">
         <b>Teachers</b>
-    <br />
-    <%= link_to 'Teach a Course', new_instructor_course_path %>
+        <br />
+        <%= link_to 'Teach a Course', new_instructor_course_path %>
+        <br />
+        <%= link_to 'My Dashboard', dashboard_path %>
+      </div>
+      <div class="col-12 col-sm-3">
+        <b>About</b>
+        <br />
+        <%= link_to 'Team', '#' %>
+        <br />
+        <%= link_to 'Careers', '#' %>
+        <br />
+         <%= link_to 'Privacy Policy', privacy_path %>
+      </div>
+      <div class="col-12 col-sm-3">
+        <b>Contact</b>
+        <br />
+        Dr. R.J. Bertrand
+        rb11782@gmail.com
+        <br />
+      </div>
+      <div class="col-12 col-sm-3 social">
+        <b>Social</b>
+        <br />
+        <br />
+        <span class="fa fa-github-square fa-2x"></span>
+        <span class="fa fa-facebook-square fa-2x"></span>
+        <span class="fa fa-twitter-square fa-2x"></span>
+      </div>
+      </div>
       </div>
     </div>
      <script src="http://vjs.zencdn.net/5.12.6/video.js"></script>
